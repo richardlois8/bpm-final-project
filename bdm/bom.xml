@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.toped.model.OrderItem">
+            <fields>
+                <field type="INTEGER" length="255" name="orderItemId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="orderId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="productId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="quantity" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.toped.model.OrderRequest">
+            <fields>
+                <field type="INTEGER" length="255" name="orderId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="customerId" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="orderDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.toped.model.Payment">
+            <fields>
+                <field type="INTEGER" length="255" name="paymentId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="orderId" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="paymentDate" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="paymentAmount" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="paymentMethod" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.toped.model.Product">
+            <description>menginformasikan produk yang dijual</description>
+            <fields>
+                <field type="INTEGER" length="255" name="productId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="productName" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="price" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stockQuantity" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.toped.model.Shipment">
+            <fields>
+                <field type="INTEGER" length="255" name="shipmentId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="orderId" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="shipmentDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="shipmentStatus" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="shipmentAddress" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
